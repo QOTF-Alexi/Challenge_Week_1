@@ -19,7 +19,7 @@ def route(difficulty):
             instantDeath = 2
 
     print(f"{difficulty} paths ahead. {difficulty-2} paths are safe.")
-    print("One path will result in death, another might")
+    print("One path will definitely result in death, another might.")
     while feeling_brave == True:
         try:
             guess = int(input("Which will you open? "))

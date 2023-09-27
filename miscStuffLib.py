@@ -3,6 +3,7 @@
     Written by:
 '''
 
+# Will print an entered amount of - characters
 def lines(length):
     print('-'*length)
 

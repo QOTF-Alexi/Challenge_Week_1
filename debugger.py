@@ -1,6 +1,6 @@
 '''
     Debugging code for the game.
-    Written by: 
+    Written by:
 '''
 def debug():
     print("Seems to be working fine!")

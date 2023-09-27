@@ -21,3 +21,5 @@ while lost == 0:
         lost = 1
 
 print(f"Oh no, that shouldn't have happened... You finished {difficulty-2} activities.")
+
+print("test")

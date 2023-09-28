@@ -34,6 +34,7 @@ def route(difficulty):
                 return "hardTime"
             else:
                 print("That wasn't too hard, was it? Let's continue.")
+                # Add item drop here?
                 feeling_brave = False
         except ValueError:
             print("Please enter a whole number!")

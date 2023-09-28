@@ -1,4 +1,7 @@
-#voice recorder is at a different location
+'''
+    Voice recorder is at a different location
+    Written by:
+'''
 import miscStuffLib 
 
 print("|You have arrived at your next location.|")

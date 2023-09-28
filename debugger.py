@@ -9,7 +9,7 @@ import battler_debug
 import flyingRoute
 import mathLol
 #import minefield
-#import quiz
+import quiz
 
 def debug():
     levelList = []
@@ -33,5 +33,11 @@ def debug():
     print("Starting mathLol")
     mathLol.debugTest()
     print("mathLol test completed.")
+
+    miscStuffLib.lines(28)
+    print("Starting quizdragon. Get more than 4 correct")
+    quiz.quizdragon("debugger")
+    print("Starting again. Get all incorrect")
+    quiz.quizdragon("debugger")
 
 debug()

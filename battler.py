@@ -1,11 +1,12 @@
 '''
     A text-based clone of a popular game.
-    Written by:
+    Written by: Benno
 '''
 
 from random import randint
 from time import sleep
 import miscStuffLib
+
 
 characters = ["The vampire", "The very dangerous sheep", "Desmond the moon bear"]
 
@@ -27,12 +28,14 @@ chosenOne = characters[randint(0, 2)]
 liGoodAttacks = goodAttacks[chosenOne]
 liDamageDealers = damageDealers[chosenOne]
 
+
 def proposeAttacks(inventory):
     proposedAttacks = goodAttacks[chosenOne]
     if "garlicbread" in inventory:
         proposedAttacks.insert((randint(0, len(proposedAttacks))), "garlicbread")
     print("You have the following attacks available to you:\n")
     print(proposedAttacks, '\n')
+
 
 def battler(inventory):
     opponentLife = 100
@@ -79,8 +82,8 @@ def battler(inventory):
                 elif counterAttack == "little curse":
                     print("The vampire lets out a little curse. That hurt!")
                     playerLife -= randint(10, 28)
-
                 sleep(2)
+
             else:
                 print(f"{chosenOne} has lost!")
                 sleep(2)
@@ -124,8 +127,8 @@ def battler(inventory):
                 elif counterAttack == "trample":
                     print("You were pushed over and are now being trampled.")
                     playerLife -= randint(30, 50)
-
                 sleep(2)
+
             else:
                 print(f"{chosenOne} has lost!")
                 sleep(2)
@@ -166,12 +169,13 @@ def battler(inventory):
                 elif counterAttack == "run into":
                     print("Desmond runs into you!")
                     playerLife -= randint(30, 50)
-
                 sleep(2)
+
             else:
                 print(f"{chosenOne} has lost!")
                 sleep(2)
             miscStuffLib.clear() # PUT THIS AFTER THE ATTACK IS DEALT
+
 
     if opponentLife <= 0:
         print("You won!")

@@ -35,6 +35,7 @@ def route(difficulty):
                 return "hardTime"
             else:
                 print("That wasn't too hard, was it? Let's continue.")
+                return "itemDrop"
                 # Add item drop here?
                 feeling_brave = False
         except ValueError:

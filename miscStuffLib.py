@@ -9,13 +9,6 @@ from os import system, name
 def lines(length):
     print('-'*length)
 
-def debug():
-    lines(28)
-    print("|" + " "*26 + "|")
-    print("|  This is the TEST MODE!  |")
-    print("|" + " "*26 + "|")
-    lines(28)
-
 def clear(): 
     # for Windows
     if name == 'nt': 

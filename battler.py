@@ -32,7 +32,9 @@ liDamageDealers = damageDealers[chosenOne]
 def proposeAttacks(inventory):
     proposedAttacks = goodAttacks[chosenOne]
     if "garlicbread" in inventory:
-        proposedAttacks.insert((randint(0, len(proposedAttacks))), "garlicbread")
+        if "garlicbread" not in proposedAttacks:
+            proposedAttacks.insert((randint(0, len(proposedAttacks))), "garlicbread")
+        else: ()
     print("You have the following attacks available to you:\n")
     print(proposedAttacks, '\n')
 

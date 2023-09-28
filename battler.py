@@ -4,23 +4,24 @@
 '''
 
 from random import randint
+import miscStuffLib
 
 opponentLife = 100
 playerLife = 101
 
-characters = ["vampire", "very dangerous sheep", "Desmond the moon bear"]
+characters = ["The vampire", "The very dangerous sheep", "Desmond the moon bear"]
 
 # These will deal damage to the opponent
 goodAttacks = {
-    "vampire": ["Foobar", "foo", "bar", "baz"],
-    "very dangerous sheep": [],
+    "The vampire": ["flashlight", "silver", "extracted teeth", "take off shoes"],
+    "The very dangerous sheep": [],
     "Desmond the moon bear": ["Answer their question"]
 }
 
 # These will deal damage to the player
 damageDealers = {
-    "vampire": ["Foobar", "foo", "bar", "baz"],
-    "very dangerous sheep": [],
+    "The vampire": ["Foobar", "foo", "bar", "baz"],
+    "The very dangerous sheep": [],
     "Desmond the moon bear": ["How did I get here"]
 }
 
@@ -36,8 +37,56 @@ def proposeAttacks(inventory):
     print(proposedAttacks)
 
 def battler(inventory):
-    print(f"You will have to battle a {chosenOne} to continue!")
-    proposeAttacks(inventory, '\n')
+    print(f"You will have to battle {chosenOne} to continue!")
     while opponentLife > 0 and playerLife > 0:
         if chosenOne == "vampire":
-            #battle
+            print(f"You have {playerLife} life left. {chosenOne} has {opponentLife} left")
+            print("Your turn!")
+            proposeAttacks(inventory, '\n')
+            attack = input("Which will you choose? ")
+            if attack == "garlicbread":
+                print("This vampire really likes garlic bread! No damage was dealt.")
+            elif attack == "flashlight":
+                print("You pulled out a high power flashlight! The vampire fell to its knees.")
+                opponentLife -= randint(10, 28)
+            elif attack == "silver":
+                print("You pulled out a spoon! The vampire does not like spoons.")
+                opponentLife -= randint(10, 28)
+            elif attack == "extracted teeth":
+                print("Why do you even have a handful of teeth on you?")
+                opponentLife -= randint(10, 28)
+            elif attack == "take off shoes":
+                print("The vampire dislikes bare feet a lot!")
+                opponentLife -= randint(30, 50)
+            else:
+                print("That was not a valid attack. You've just played your turn!")
+            counterAttack = liDamageDealers[randint(0, len(liDamageDealers))]
+            if counterAttack == "":
+                print("one")
+            elif counterAttack == "":
+                print("two")
+            elif counterAttack == "":
+                print("three")
+            elif counterAttack == "":
+                print("four")
+            miscStuffLib.clear() # PUT THIS AFTER THE ATTACK IS DEALT
+        elif chosenOne == "very dangerous sheep":
+            print(f"You have {playerLife} life left. {chosenOne} has {opponentLife} left")
+            print("Your turn!")
+            proposeAttacks(inventory, '\n')
+            attack = input("Which will you choose? ")
+            counterAttack = liDamageDealers[randint(0, len(liDamageDealers))]
+            miscStuffLib.clear() # PUT THIS AFTER THE ATTACK IS DEALT
+        elif chosenOne == "Desmond the moon bear":
+            print(f"You have {playerLife} life left. {chosenOne} has {opponentLife} left")
+            print("Your turn!")
+            proposeAttacks(inventory, '\n')
+            attack = input("Which will you choose? ")
+            counterAttack = liDamageDealers[randint(0, len(liDamageDealers))]
+            miscStuffLib.clear() # PUT THIS AFTER THE ATTACK IS DEALT
+    if opponentLife <= 0:
+        print("You won!")
+        # Item drop?
+    elif playerLife <= 0:
+        print("You lost!")
+        return "lost"

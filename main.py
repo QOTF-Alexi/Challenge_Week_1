@@ -13,7 +13,7 @@ import mathLol
 import battler
 
 difficulty = 3 # Gradually gets higher throughout the game
-lost = 0
+lives = 5
 hardTime = 0
 
 activities = ["route", "math", "battler"]
@@ -36,7 +36,8 @@ else:
 
 
 # This runs continuously 
-while lost == 0:
+while lives > 0:
+    print(f"You have {lives} lives.\n")
     playGame = activities[randint(0, len(activities)-1)]
     if playGame == "route":
         level = flyingRoute.route(difficulty)
@@ -47,15 +48,19 @@ while lost == 0:
 
     if level == "hardTime":
         hardTime = 1
-        lost = 0
     elif level == "lost":
         hardtime = 0
-        lost = 1
+        lives -= 1
     elif level == None:
         print("No drops, no loss")
     else:
         inventory.append(level)
 
-# Only appears when you lose
-print(f"Oh no, that shouldn't have happened... You finished {difficulty-2} activities.")
-print(f"You ended with the following items in your inventory: {inventory}")
+# Only appears when you lost
+if lives <= 0:
+    print(f"Oh no, that shouldn't have happened... You finished {difficulty-2} activities.")
+    print(f"You ended with the following items in your inventory: {inventory}")
+else:
+    print("The planet has been saved. You won the game!")
+    print(f"You had {lives} lives left and ended with difficulty level {difficulty}")
+    print(f"You had the following items left: {inventory}")

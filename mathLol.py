@@ -1,7 +1,7 @@
 '''
     The biggest waste of time ever.
     This code has no consequences for game progression.
-    Written by:
+    Written by: Benno
 '''
 
 from random import randint
@@ -11,7 +11,7 @@ def calcPi():
 
     print("You have to calculate the circumference of a circle!")
     print("The formula is 2*pi*r, but what was pi again?")
-    inpi = float(input("Enter the number pi with 8 decimals precision"))
+    inpi = float(input("Enter the number pi with 8 decimals precision "))
     if inpi == pi:
         print("Woah, you go big brain!")
     else:

@@ -6,10 +6,13 @@
 import miscStuffLib # Imports the miscStuffLib.py file as a library.
 import flyingRoute
 import mathLol
+import battler
 
 difficulty = 3 # Gradually gets higher throughout the game
 lost = 0
 hardTime = 0
+
+inventory = []
 
 # Startup sequence
 miscStuffLib.lines(76)
@@ -33,6 +36,11 @@ while lost == 0:
         hardTime = 1
         lost = 0
     elif level == "lost":
+        hardtime = 0
+        lost = 1
+
+    level = battler.battler(inventory)
+    if level == "lost":
         hardtime = 0
         lost = 1
 

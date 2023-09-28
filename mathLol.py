@@ -26,3 +26,22 @@ def addRandom():
         print("That seems accurate enough")
     else:
         print("So close yet so far")
+
+def subRandom():
+    num1 = randint(0, 50)
+    num2 = randint(0, 50)
+    print(f"Please calculate {num1}-{num2}")
+    num3 = int(input("Please? "))
+    if num3 == num1-num2:
+        print("That seems accurate enough")
+    else:
+        print("So close yet so far")
+
+def thisDoesNothing():
+    playWhich = randint(0, 2)
+    if playWhich == 0:
+        calcPi()
+    elif playWhich == 1:
+        addRandom()
+    elif playWhich == 2:
+        subRandom()

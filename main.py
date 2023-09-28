@@ -3,6 +3,10 @@
     Written by:
     Class: BC11K @ Hogeschool Rotterdam
 '''
+
+from random import randint
+
+# Import our own activities and library
 import miscStuffLib # Imports the miscStuffLib.py file as a library.
 import flyingRoute
 import mathLol
@@ -12,6 +16,7 @@ difficulty = 3 # Gradually gets higher throughout the game
 lost = 0
 hardTime = 0
 
+activities = ["route", "math", "battler"]
 inventory = []
 
 # Startup sequence
@@ -29,20 +34,28 @@ else:
     print(f"I like your name, {name}. Prepare for some challenges. It won't be easy!\n")
     #This will probably never be used again
 
+
 # This runs continuously 
 while lost == 0:
-    level = flyingRoute.route(difficulty)
+    playGame = activities[randint(0, len(activities)-1)]
+    if playGame == "route":
+        level = flyingRoute.route(difficulty)
+    elif playGame == "math":
+        level = mathLol.thisDoesNothing()
+    elif playGame == "battler":
+        level = battler.battler(inventory)
+
     if level == "hardTime":
         hardTime = 1
         lost = 0
     elif level == "lost":
         hardtime = 0
         lost = 1
-
-    level = battler.battler(inventory)
-    if level == "lost":
-        hardtime = 0
-        lost = 1
+    elif level == None:
+        print("No drops, no loss")
+    else:
+        inventory.append(level)
 
 # Only appears when you lose
 print(f"Oh no, that shouldn't have happened... You finished {difficulty-2} activities.")
+print(f"You ended with the following items in your inventory: {inventory}")

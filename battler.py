@@ -181,5 +181,5 @@ def battler(inventory):
         print("You won!")
         # Item drop?
     elif playerLife <= 0:
-        print("You lost!")
+        print("You lost a life!")
         return "lost"

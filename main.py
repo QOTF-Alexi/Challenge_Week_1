@@ -40,10 +40,13 @@ while lives > 0:
     print(f"You have {lives} lives.\n")
     playGame = activities[randint(0, len(activities)-1)]
     if playGame == "route":
+        miscStuffLib.clear()
         level = flyingRoute.route(difficulty)
     elif playGame == "math":
+        miscStuffLib.clear()
         level = mathLol.thisDoesNothing()
     elif playGame == "battler":
+        miscStuffLib.clear()
         level = battler.battler(inventory)
 
     if level == "hardTime":

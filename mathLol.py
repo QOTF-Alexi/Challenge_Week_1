@@ -45,3 +45,19 @@ def thisDoesNothing():
         addRandom()
     elif playWhich == 2:
         subRandom()
+
+def debugTest():
+    print("Enter the correct one here!")
+    calcPi()
+    print("Enter the incorrect one here!")
+    calcPi()
+
+    print("Enter the correct one here!")
+    addRandom()
+    print("Enter the incorrect one here!")
+    addRandom()
+
+    print("Enter the correct one here!")
+    subRandom()
+    print("Enter the incorrect one here!")
+    subRandom()

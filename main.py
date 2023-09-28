@@ -12,12 +12,14 @@ import miscStuffLib # Imports the miscStuffLib.py file as a library.
 import flyingRoute
 import mathLol
 import battler
+import minefield
+import quiz
 
 difficulty = 3 # Gradually gets higher throughout the game
 lives = 5
 hardTime = 0
 
-activities = ["route", "math", "battler"]
+activities = ["route", "math", "battler", "minefield", "quiz"]
 inventory = []
 
 # Startup sequence

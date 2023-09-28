@@ -27,6 +27,7 @@ def route(difficulty):
                 print("That is not a valid entry!")
             elif guess == instantDeath:
                 feeling_brave = False
+                print("You took the wrong path and lost a life!")
                 return "lost"
             elif guess == hardLevel:
                 feeling_brave = False
@@ -34,6 +35,7 @@ def route(difficulty):
                 return "hardTime"
             else:
                 print("That wasn't too hard, was it? Let's continue.")
+                # Add item drop here?
                 feeling_brave = False
         except ValueError:
             print("Please enter a whole number!")

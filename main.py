@@ -12,7 +12,7 @@ import miscStuffLib # Imports the miscStuffLib.py file as a library.
 import flyingRoute
 import mathLol
 import battler
-import minefield
+#import minefield
 import quiz
 
 difficulty = 3 # Gradually gets higher throughout the game
@@ -57,6 +57,9 @@ while lives > 0:
     elif playGame == "battler":
         miscStuffLib.clear()
         level = battler.battler(inventory)
+    elif playGame == "quiz":
+        miscStuffLib.clear()
+        level = quiz.quizdragon(name)
 
     if level == "hardTime":
         hardTime = 1

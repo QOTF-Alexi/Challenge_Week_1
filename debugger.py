@@ -21,11 +21,17 @@ def debug():
 
     print("Starting Battler")
     battler_debug.battler("garlicbread")
+
     miscStuffLib.lines(28)
     print("Starting flyingRoute")
     while "lost" not in levelList and "hardTime" not in levelList and "itemDrop" not in levelList:
         level = flyingRoute.route(5)
         levelList.append(level)
     print("flyingRoute test completed.")
+
+    miscStuffLib.lines(28)
+    print("Starting mathLol")
+    mathLol.debugTest()
+    print("mathLol test completed.")
 
 debug()

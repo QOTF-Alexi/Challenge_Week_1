@@ -9,6 +9,7 @@ from time import sleep
 
 # Import our own activities and library
 import miscStuffLib # Imports the miscStuffLib.py file as a library.
+import debugger
 import flyingRoute
 import mathLol
 import battler
@@ -35,7 +36,7 @@ miscStuffLib.lines(76)
 sleep(1)
 name = input("May I ask, what is your name again? My memory is a bit fuzzy. ")
 if name == "debug":
-    miscStuffLib.debug() # Breakdown: "debug()" calls the function inside the file "miscStuffLib".
+    debugger.debug() # Breakdown: "debug()" calls the function inside the file "miscStuffLib".
     print()
     # Needs to trigger playthrough of every activity.
 else:

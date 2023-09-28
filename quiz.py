@@ -66,5 +66,3 @@ def quizdragon(name):
     else: #player continues without item
         print(f"You almost had it, but it's unfortunate, {name}. I cannot trust you with the reponsibility of my golden wings.")
         print("I hope you travel safely and good luck with your journey.")
-
-print(quizdragon())

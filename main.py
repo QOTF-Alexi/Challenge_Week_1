@@ -5,6 +5,7 @@
 '''
 
 from random import randint
+from time import sleep
 
 # Import our own activities and library
 import miscStuffLib # Imports the miscStuffLib.py file as a library.
@@ -21,23 +22,29 @@ inventory = []
 
 # Startup sequence
 miscStuffLib.lines(76)
+sleep(0.3)
 print("| Loud noises and computer beeps awaken you.                               |")
+sleep(0.3)
 print("| A computerized voice: Welcome. You have been chosen as a space traveler! |")
+sleep(0.3)
 print("| You have to save a planet from invaders!                                 |")
+sleep(0.3)
 miscStuffLib.lines(76)
+sleep(1)
 name = input("May I ask, what is your name again? My memory is a bit fuzzy. ")
 if name == "debug":
     miscStuffLib.debug() # Breakdown: "debug()" calls the function inside the file "miscStuffLib".
     print()
     # Needs to trigger playthrough of every activity.
 else:
-    print(f"I like your name, {name}. Prepare for some challenges. It won't be easy!\n")
+    print(f"\nI like your name, {name}. Prepare for some challenges. It won't be easy!")
     #This will probably never be used again
 
 
 # This runs continuously 
 while lives > 0:
     print(f"You have {lives} lives.\n")
+    sleep(5)
     playGame = activities[randint(0, len(activities)-1)]
     if playGame == "route":
         miscStuffLib.clear()

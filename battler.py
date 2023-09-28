@@ -41,9 +41,11 @@ def battler(inventory):
     opponentLife = 100
     playerLife = 101
     print(f"You will have to battle {chosenOne} to continue!")
+    sleep(1)
     while opponentLife > 0 and playerLife > 0:
         if chosenOne == "The vampire":
             print(f"You have {playerLife} life left. {chosenOne} has {opponentLife} left")
+            sleep(0.3)
             print("Your turn!")
 
             proposeAttacks(inventory)
@@ -91,6 +93,7 @@ def battler(inventory):
 
         elif chosenOne == "The very dangerous sheep":
             print(f"You have {playerLife} life left. {chosenOne} has {opponentLife} left")
+            sleep(0.3)
             print("Your turn!")
 
             proposeAttacks(inventory)
@@ -136,6 +139,7 @@ def battler(inventory):
 
         elif chosenOne == "Desmond the moon bear":
             print(f"You have {playerLife} life left. {chosenOne} has {opponentLife} left")
+            sleep(0.3)
             print("Your turn!")
 
             proposeAttacks(inventory)

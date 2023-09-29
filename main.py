@@ -51,9 +51,6 @@ while lives > 0:
     if playGame == "route":
         miscStuffLib.clear()
         level = flyingRoute.route(difficulty)
-    elif playGame == "math":
-        miscStuffLib.clear()
-        level = mathLol.thisDoesNothing()
     elif playGame == "battler":
         miscStuffLib.clear()
         level = battler.battler(inventory)

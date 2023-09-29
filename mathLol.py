@@ -6,18 +6,20 @@
 
 from random import randint
 
-def calcPi():
-    pi = 3.14159265
+def medium():
+    pi = 3.14159
 
     print("You have to calculate the circumference of a circle!")
     print("The formula is 2*pi*r, but what was pi again?")
-    inpi = float(input("Enter the number pi with 8 decimals precision "))
+    inpi = float(input("Enter the number pi with 5 decimals precision "))
     if inpi == pi:
         print("Woah, you go big brain!")
     else:
-        print("You can call yourself lucky that Pi can be rounded up to 4 without much issue")
+        print("Oh. Shouldn't everyone know that?")
+        return "lost"
 
-def addRandom():
+
+def easy():
     num1 = randint(0, 50)
     num2 = randint(0, 50)
     print(f"Please calculate {num1}+{num2}")
@@ -26,38 +28,31 @@ def addRandom():
         print("That seems accurate enough")
     else:
         print("So close yet so far")
+        return "lost"
 
-def subRandom():
-    num1 = randint(0, 50)
-    num2 = randint(0, 50)
-    print(f"Please calculate {num1}-{num2}")
-    num3 = int(input("Please? "))
-    if num3 == num1-num2:
-        print("That seems accurate enough")
+def hard():
+    print("Please solve 2^3+2^0+8/4")
+    answer = input("Please? ")
+    if answer == (2^3+2^0+8/4):
+        print("That is indeed correct")
     else:
-        print("So close yet so far")
+        print("Nope.")
+        return "lost"
 
-def thisDoesNothing():
-    playWhich = randint(0, 2)
-    if playWhich == 0:
-        calcPi()
-    elif playWhich == 1:
-        addRandom()
-    elif playWhich == 2:
-        subRandom()
+
 
 def debugTest():
     print("Enter the correct one here!")
-    calcPi()
+    easy()
     print("Enter the incorrect one here!")
-    calcPi()
+    easy()
 
     print("Enter the correct one here!")
-    addRandom()
+    medium()
     print("Enter the incorrect one here!")
-    addRandom()
+    medium()
 
     print("Enter the correct one here!")
-    subRandom()
+    hard()
     print("Enter the incorrect one here!")
-    subRandom()
+    hard()

@@ -70,3 +70,19 @@ else:
     print("The planet has been saved. You won the game!")
     print(f"You had {lives} lives left.")
     print(f"You had the following items left: {inventory}")
+    sleep(1)
+    print("You now have a very difficult choice to make")
+    sleep(0.3)
+    print("You can choose to return to your home planet and you will forget everything that happened.")
+    print("Or, you can stay here, on Eris, and build up your kingdom")
+    endIn = input("What will you choose? ")
+    if "return" in endIn:
+        print("You suddenly pass out.")
+        sleep(0.5)
+        print("And you wake up, late for school!")
+    elif "stay" in endIn:
+        print("So you chose to stay, huh? Solid choice!")
+        sleep(0.5)
+        print("And now it's time to build your kingdom!")
+    else:
+        print("You just got wiped off the face of the planet because you couldn't choose.")

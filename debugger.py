@@ -12,7 +12,6 @@ import minefieldd
 import quiz
 
 def debug():
-    levelList = []
     miscStuffLib.lines(28)
     print("|" + " "*26 + "|")
     print("|  This is the TEST MODE!  |")
@@ -24,9 +23,7 @@ def debug():
 
     miscStuffLib.lines(28)
     print("Starting flyingRoute")
-    while "lost" not in levelList and "hardTime" not in levelList and "itemDrop" not in levelList:
-        level = flyingRoute.route()
-        levelList.append(level)
+    level = flyingRoute.route()
     print("flyingRoute test completed.")
 
     miscStuffLib.lines(28)

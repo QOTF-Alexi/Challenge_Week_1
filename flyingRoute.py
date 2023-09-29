@@ -20,7 +20,7 @@ def route():
     print("One path will definitely result in a lost life, another might.")
     while feeling_brave == True:
         try:
-            guess = int(input("Which will you take? (North, West or East) "))
+            guess = input("Which will you take? (North, West or East) ")
             if guess == "North":
                 guess = 1
             elif guess == "West":
@@ -54,4 +54,4 @@ def route():
                 else:
                     return diff
         except ValueError:
-            print("Please enter a whole number!")
+            print("That input seems off...")

@@ -4,7 +4,6 @@
     Class: BC11K @ Hogeschool Rotterdam
 '''
 
-from random import randint
 from time import sleep
 
 # Import our own activities and library
@@ -36,6 +35,8 @@ if name == "debug":
     print()
 else:
     print(f"\nI like your name, {name}. Prepare for some challenges. It won't be easy!")
+    print("Your objective will become more clear throughout the game.")
+    print("Whomever put you into this rocket did leave a note saying you're going to a planet in need of help.")
 
 
 # This runs continuously 

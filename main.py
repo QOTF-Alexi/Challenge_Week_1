@@ -15,13 +15,13 @@ import flyingRoute
 import mathLol
 import minefieldd
 import quiz
-#import riddles
+import riddles
 
 difficulty = 3 # Gradually gets higher throughout the game
 lives = 5
 hardTime = 0
 
-activities = ["route", "math", "battler", "minefield", "quiz"]
+activities = ["route", "math", "battler", "minefield", "quiz", "riddles"]
 inventory = []
 
 # Startup sequence
@@ -37,12 +37,10 @@ miscStuffLib.lines(76)
 sleep(1)
 name = input("May I ask, what is your name again? My memory is a bit fuzzy. ")
 if name == "debug":
-    debugger.debug() # Breakdown: "debug()" calls the function inside the file "miscStuffLib".
+    debugger.debug() # Breakdown: "debug()" calls the function inside the file "debugger".
     print()
-    # Needs to trigger playthrough of every activity.
 else:
     print(f"\nI like your name, {name}. Prepare for some challenges. It won't be easy!")
-    #This will probably never be used again
 
 
 # This runs continuously 
@@ -65,6 +63,9 @@ while lives > 0:
     elif playGame == "minefield":
         miscStuffLib.clear()
         level = minefieldd.minefield()
+    elif playGame == "minefield":
+        miscStuffLib.clear()
+        level = riddles.riddlegame()
 
     if level == "hardTime":
         hardTime = 1

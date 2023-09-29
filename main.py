@@ -13,7 +13,7 @@ import battler
 import debugger
 import flyingRoute
 import mathLol
-#import minefield
+import minefieldd
 import quiz
 #import riddles
 
@@ -62,6 +62,9 @@ while lives > 0:
     elif playGame == "quiz":
         miscStuffLib.clear()
         level = quiz.quizdragon(name)
+    elif playGame == "minefield":
+        miscStuffLib.clear()
+        level = minefieldd.minefield()
 
     if level == "hardTime":
         hardTime = 1

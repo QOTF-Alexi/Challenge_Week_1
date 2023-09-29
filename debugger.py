@@ -8,7 +8,7 @@ import miscStuffLib
 import battler_debug
 import flyingRoute
 import mathLol
-#import minefield
+import minefieldd
 import quiz
 
 def debug():
@@ -39,3 +39,11 @@ def debug():
     quiz.quizdragon("debugger")
     print("Starting again. Get all incorrect")
     quiz.quizdragon("debugger")
+    print("Quiz test completed.")
+
+    miscStuffLib.lines(28)
+    print("Starting minefield. Get all correct.")
+    minefieldd.minefield()
+    print("Starting again. Get all incorrect.")
+    minefieldd.minefield()
+    print("Minefield test completed.")

@@ -1,4 +1,9 @@
-#voice recorder is at a different location
+'''
+voice recorder is at a different location
+minefield puzzle 
+written by: no'railly
+
+'''
 import miscStuffLib 
 
 print("|You have arrived at your next location.|")
@@ -11,7 +16,7 @@ if voice == "PLAY":
     print("|        please listen carefully.            |")
     print("|   This message will only be played once!   |")
     print("|  To get thru the minefield you need to go: |")
-    print("|left, right, forward, left, backward, left.|")
+    print("|left, right, forward, left, backward, left. |")
     print("|  I hope you make it to the end. Good luck! |")
 
 else:

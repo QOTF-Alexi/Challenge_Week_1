@@ -11,6 +11,8 @@ import miscStuffLib
 def quizdragon(name):
     print("Thou who is courageous enough to enter Veldora's Den shall be given the chance to recieve thy blessing.")
     print("Welcome young traveller!")
+
+    
     questions = ("What is the name of the heavenly presence that is bestowing you one of its heavenly gifts?",
                  "Which ocean is the biggest ocean in the world?",
                  "What is the name of the planet you are saving?",

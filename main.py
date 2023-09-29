@@ -36,8 +36,11 @@ if name == "debug":
     print()
 else:
     print(f"\nI like your name, {name}. Prepare for some challenges. It won't be easy!")
+    sleep(0.3)
     print("Your objective will become more clear throughout the game.")
+    sleep(0.3)
     print("Whomever put you into this rocket did leave a note saying you're going to a planet in need of help.")
+    sleep(0.3)
 
 
 # This runs continuously 
@@ -71,14 +74,14 @@ if lives <= 0:
     print(f"Oh no, that shouldn't have happened... You died and the game ended.")
     print(f"You ended with the following items in your inventory: {inventory}")
 else:
-    print("The planet has been saved. You won the game!")
+    print(f"The planet has been saved, thanks to you, {name}. You won the game!")
     print(f"You had {lives} lives left.")
-    print(f"You had the following items left: {inventory}")
+    print(f"And you had the following items left: {inventory}")
     sleep(1)
-    print("You now have a very difficult choice to make")
+    print("You now have a very difficult choice to make:")
     sleep(0.3)
     print("You can choose to return to your home planet and you will forget everything that happened.")
-    print("Or, you can stay here, on Eris, and build up your kingdom")
+    print("Or, you can stay here, on Eris, and build up your kingdom!")
     endIn = input("What will you choose? ")
     if "return" in endIn:
         print("You suddenly pass out.")

@@ -11,21 +11,28 @@ if voice == "PLAY":
     print("|        please listen carefully.            |")
     print("|   This message will only be played once!   |")
     print("|  To get thru the minefield you need to go: |")
-    print("|left, right, forward, left, backward, left. |")
+    print("|left, right, forward, left, backward, left.|")
     print("|  I hope you make it to the end. Good luck! |")
+
+else:
+    print("You did not click PLAY. Please try again.")
     
-
+    
 directions = ["left", "right", "forward", "left", "backward", "left"]
+max_guesses = 10
 current_step = 0
+guess_count = 0
 
-while current_step < len (directions):
-    player_input = input (f"Enter your next move ({directions[current_step]}: ")
+while current_step < len(directions) and guess_count < max_guesses:
+    player_input = input(f"Enter your next move: ")
 
-if player_input == directions[current_step]:
-    current_step+= 1
+    if player_input == directions[current_step]:
+        current_step += 1
+    else:
+        print("Oops! That's not the correct direction. Try again.")
+        guess_count += 1
 
-else: 
-    print("oops! that's not the correct direction. Try again.")
-
-
-print("|Congratulations! you've succesfully navigated the minefield.|")
+if current_step == len(directions):
+    print("|Congratulations! You've successfully navigated the minefield.|")
+else:
+    print("You've exceeded the maximum number of guesses. Game over.")

@@ -9,15 +9,18 @@ from time import sleep
 
 # Import our own activities and library
 import miscStuffLib # Imports the miscStuffLib.py file as a library.
+import debugger
 import flyingRoute
 import mathLol
 import battler
+#import minefield
+import quiz
 
 difficulty = 3 # Gradually gets higher throughout the game
 lives = 5
 hardTime = 0
 
-activities = ["route", "math", "battler"]
+activities = ["route", "math", "battler", "minefield", "quiz"]
 inventory = []
 
 # Startup sequence
@@ -33,7 +36,7 @@ miscStuffLib.lines(76)
 sleep(1)
 name = input("May I ask, what is your name again? My memory is a bit fuzzy. ")
 if name == "debug":
-    miscStuffLib.debug() # Breakdown: "debug()" calls the function inside the file "miscStuffLib".
+    debugger.debug() # Breakdown: "debug()" calls the function inside the file "miscStuffLib".
     print()
     # Needs to trigger playthrough of every activity.
 else:
@@ -55,6 +58,9 @@ while lives > 0:
     elif playGame == "battler":
         miscStuffLib.clear()
         level = battler.battler(inventory)
+    elif playGame == "quiz":
+        miscStuffLib.clear()
+        level = quiz.quizdragon(name)
 
     if level == "hardTime":
         hardTime = 1

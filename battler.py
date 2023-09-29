@@ -40,6 +40,7 @@ def proposeAttacks(inventory):
 
 
 def battler(inventory):
+    breadUsed = 0
     opponentLife = 100
     playerLife = 101
     print(f"You will have to battle {chosenOne} to continue!")
@@ -57,6 +58,7 @@ def battler(inventory):
             attack = input("Which will you choose? (enter without quotation marks) ")
             if attack == "garlicbread":
                 print("This vampire really likes garlic bread! You share the bread and no damage was dealt.")
+                breadUsed = 1
             elif attack == "flashlight":
                 print("You pulled out a high power flashlight! The vampire fell to its knees.")
                 opponentLife -= randint(10, 28)
@@ -188,7 +190,14 @@ def battler(inventory):
 
     if opponentLife <= 0:
         print("You won!")
+        if breadUsed == 1:
+            return "breadUsed"
+        else:
+            return None
         # Item drop?
     elif playerLife <= 0:
-        print("You lost a life!")
-        return "lost"
+        print("You lost!")
+        if breadUsed == 1:
+            return "breadUsed"
+        else:
+            return "lost"

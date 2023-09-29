@@ -19,7 +19,6 @@ import riddles
 
 difficulty = 3 # Gradually gets higher throughout the game
 lives = 5
-hardTime = 0
 
 activities = ["route", "math", "battler", "minefield", "quiz", "riddles"]
 inventory = []
@@ -47,38 +46,31 @@ else:
 while lives > 0:
     print(f"You have {lives} lives.\n")
     sleep(5)
-    playGame = activities[randint(0, len(activities)-1)]
-    if playGame == "route":
-        miscStuffLib.clear()
-        level = flyingRoute.route(difficulty)
-    elif playGame == "battler":
-        miscStuffLib.clear()
-        level = battler.battler(inventory)
-    elif playGame == "quiz":
-        miscStuffLib.clear()
-        level = quiz.quizdragon(name)
-    elif playGame == "minefield":
-        miscStuffLib.clear()
-        level = minefieldd.minefield()
-    elif playGame == "minefield":
-        miscStuffLib.clear()
-        level = riddles.riddlegame()
+    miscStuffLib.clear()
+    level = riddles.riddlegame()
+    miscStuffLib.clear()
+    level = flyingRoute.route(difficulty)
+    miscStuffLib.clear()
+    level = quiz.quizdragon(name)
+    miscStuffLib.clear()
+    level = minefieldd.minefield()
+    miscStuffLib.clear()
+    level = battler.battler(inventory)
 
-    if level == "hardTime":
-        hardTime = 1
-    elif level == "lost":
-        hardtime = 0
+    if level == "lost":
         lives -= 1
     elif level == None:
         print("No drops, no loss")
+    elif level == "breadUsed":
+        inventory.remove("garlicbread")
     else:
         inventory.append(level)
 
-# Only appears when you lost
+# Only appears after game completion.
 if lives <= 0:
-    print(f"Oh no, that shouldn't have happened... You finished {difficulty-2} activities.")
+    print(f"Oh no, that shouldn't have happened... You died and the game ended.")
     print(f"You ended with the following items in your inventory: {inventory}")
 else:
     print("The planet has been saved. You won the game!")
-    print(f"You had {lives} lives left and ended with difficulty level {difficulty}")
+    print(f"You had {lives} lives left.")
     print(f"You had the following items left: {inventory}")

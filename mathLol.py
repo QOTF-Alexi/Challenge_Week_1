@@ -14,6 +14,7 @@ def medium():
     inpi = float(input("Enter the number pi with 5 decimals precision "))
     if inpi == pi:
         print("Woah, you go big brain!")
+        return "drop"
     else:
         print("Oh. Shouldn't everyone know that?")
         return "lost"
@@ -26,6 +27,7 @@ def easy():
     num3 = int(input("Please? "))
     if num3 == num1+num2:
         print("That seems accurate enough")
+        return "drop"
     else:
         print("So close yet so far")
         return "lost"
@@ -35,9 +37,9 @@ def hard():
     answer = input("Please? ")
     if answer == (2^3+2^0+8/4):
         print("That is indeed correct")
+        return "drop"
     else:
-        print("Nope.")
-        return "lost"
+        print("Nope. But you'll be spared")
 
 
 

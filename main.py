@@ -16,6 +16,7 @@ import quiz
 import riddles
 
 lives = 5
+game = 0
 inventory = []
 
 # Startup sequence
@@ -40,19 +41,21 @@ else:
 
 
 # This runs continuously 
-while lives > 0:
+while lives > 0 and game < 6:
     print(f"You have {lives} lives.\n")
+    game += 1
     sleep(5)
     miscStuffLib.clear()
-    level = riddles.riddlegame()
-    miscStuffLib.clear()
-    level = flyingRoute.route()
-    miscStuffLib.clear()
-    level = quiz.quizdragon(name)
-    miscStuffLib.clear()
-    level = minefieldd.minefield()
-    miscStuffLib.clear()
-    level = battler.battler(inventory)
+    if game == 1:
+        level = riddles.riddlegame()
+    elif game == 2:
+        level = flyingRoute.route()
+    elif game == 3:
+        level = quiz.quizdragon(name)
+    elif game == 4:
+        level = minefieldd.minefield()
+    elif game == 5:
+        level = battler.battler(inventory)
 
     if level == "lost":
         lives -= 1

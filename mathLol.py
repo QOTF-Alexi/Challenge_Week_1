@@ -7,15 +7,16 @@
 from random import randint
 
 def calcPi():
-    pi = 3.14159265
+    pi = 3.14159
 
     print("You have to calculate the circumference of a circle!")
     print("The formula is 2*pi*r, but what was pi again?")
-    inpi = float(input("Enter the number pi with 8 decimals precision "))
+    inpi = float(input("Enter the number pi with 5 decimals precision "))
     if inpi == pi:
         print("Woah, you go big brain!")
     else:
-        print("You can call yourself lucky that Pi can be rounded up to 4 without much issue")
+        print("Oh. Shouldn't everyone know that?")
+        return "lost"
 
 def addRandom():
     num1 = randint(0, 50)

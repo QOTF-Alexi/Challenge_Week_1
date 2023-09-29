@@ -40,7 +40,9 @@ def minefield():
         print()  
 
 
-    time.sleep(2) 
+    time.sleep(2)
+
+    miscStuffLib.clear()
 
     max_guesses = 10
     current_step = 0

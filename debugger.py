@@ -25,7 +25,7 @@ def debug():
     miscStuffLib.lines(28)
     print("Starting flyingRoute")
     while "lost" not in levelList and "hardTime" not in levelList and "itemDrop" not in levelList:
-        level = flyingRoute.route(5)
+        level = flyingRoute.route()
         levelList.append(level)
     print("flyingRoute test completed.")
 

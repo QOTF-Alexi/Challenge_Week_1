@@ -8,13 +8,14 @@ from random import randint
 from time import sleep
 
 # Import our own activities and library
-import miscStuffLib # Imports the miscStuffLib.py file as a library.
+import miscStuffLib  # Imports the miscStuffLib.py file as a library.
+import battler
 import debugger
 import flyingRoute
 import mathLol
-import battler
 #import minefield
 import quiz
+#import riddles
 
 difficulty = 3 # Gradually gets higher throughout the game
 lives = 5

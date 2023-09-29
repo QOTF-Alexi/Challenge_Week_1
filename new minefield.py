@@ -40,7 +40,7 @@ def minefield():
         print()  
 
 
-    time.sleep(2)
+    time.sleep(10)
 
     miscStuffLib.clear()
 
@@ -61,3 +61,4 @@ def minefield():
         print("|Congratulations! You've successfully navigated the minefield.|")
     else:
         print("You've exceeded the maximum number of guesses. Game over.")
+

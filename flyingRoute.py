@@ -20,7 +20,7 @@ def route():
     print("One path will definitely result in a lost life, another might.")
     while feeling_brave == True:
         try:
-            guess = int(input("Which will you take? (North, West or East) "))
+            guess = input("Which will you take? (North, West or East) ")
             if guess == "North":
                 guess = 1
             elif guess == "West":
@@ -33,13 +33,25 @@ def route():
             if guess == instantDeath:
                 feeling_brave = False
                 print("You took the wrong path!")
-                mathLol.medium()
+                diff = mathLol.medium()
+                if diff == "drop":
+                    return "garlicbread"
+                else:
+                    return diff
             elif guess == hardLevel:
                 feeling_brave = False
                 print("That was not the right path. You're going to have a hard time now!")
-                mathLol.difficult()
+                diff = mathLol.hard()
+                if diff == "drop":
+                    return "garlicbread"
+                else:
+                    return diff
             else:
                 print("That wasn't too hard, was it? Let's continue.")
-                mathLol.easy()
+                diff = mathLol.easy()
+                if diff == "drop":
+                    return "garlicbread"
+                else:
+                    return diff
         except ValueError:
-            print("Please enter a whole number!")
+            print("That input seems off...")

@@ -103,4 +103,4 @@ def quizdragon(name):
             
             miscStuffLib.lines(76)
 
-quizdragon("start")
+#quizdragon("start")

@@ -20,16 +20,16 @@ def route():
     print("One path will definitely result in a lost life, another might.")
     while feeling_brave == True:
         try:
-            guess = int(input("Which will you take? (left, forward or right) "))
-            if guess == "left":
+            guess = int(input("Which will you take? (North, West or East) "))
+            if guess == "North":
                 guess = 1
-            elif guess == "forward":
+            elif guess == "West":
                 guess = 2
-            elif guess == "right":
+            elif guess == "East":
                 guess = 3
             else:
                 print("That is not a valid entry!")
-                
+
             if guess == instantDeath:
                 feeling_brave = False
                 print("You took the wrong path!")

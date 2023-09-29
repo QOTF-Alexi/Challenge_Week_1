@@ -34,8 +34,8 @@ def easy():
 
 def hard():
     print("Please solve 2^3+2^0+8/4")
-    answer = input("Please? ")
-    if answer == (2**+2**0+8/4):
+    answer = int(input("Please? "))
+    if answer == int(2**+2**0+8/4):
         print("That is indeed correct")
         return "drop"
     else:

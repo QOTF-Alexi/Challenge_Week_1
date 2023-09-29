@@ -20,6 +20,7 @@ game = 0
 inventory = []
 
 # Startup sequence
+miscStuffLib.clear()
 miscStuffLib.lines(76)
 sleep(0.3)
 print("| Loud noises and computer beeps awaken you.                               |")

@@ -44,3 +44,4 @@ def debug():
     print("Starting again. Get all incorrect.")
     minefieldd.minefield()
     print("Minefield test completed.")
+    quit()

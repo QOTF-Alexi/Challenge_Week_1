@@ -12,15 +12,11 @@ import miscStuffLib  # Imports the miscStuffLib.py file as a library.
 import battler
 import debugger
 import flyingRoute
-import mathLol
 import minefieldd
 import quiz
 import riddles
 
-difficulty = 3 # Gradually gets higher throughout the game
 lives = 5
-
-activities = ["route", "math", "battler", "minefield", "quiz", "riddles"]
 inventory = []
 
 # Startup sequence
@@ -49,7 +45,7 @@ while lives > 0:
     miscStuffLib.clear()
     level = riddles.riddlegame()
     miscStuffLib.clear()
-    level = flyingRoute.route(difficulty)
+    level = flyingRoute.route()
     miscStuffLib.clear()
     level = quiz.quizdragon(name)
     miscStuffLib.clear()

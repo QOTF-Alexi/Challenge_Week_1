@@ -51,8 +51,10 @@ while lives > 0 and game < 6:
     sleep(5)
     miscStuffLib.clear()
     if game == 1:
-        level = riddles.riddlegame()
+        level = riddles.riddle_game()
     elif game == 2:
+        print("You managed to get out, but now you have to choose a path to take!")
+        sleep(1)
         level = flyingRoute.route()
     elif game == 3:
         level = quiz.quizdragon(name)

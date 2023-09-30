@@ -97,10 +97,11 @@ def quizdragon(name):
         else: #player continues without item
             miscStuffLib.lines(76)
             
-            print(f"|You almost had it, but it's unfortunate, {name}. I cannot trust you with the reponsibility of my golden wings.|")
+            print(f"| You almost had it, but it's unfortunate, {name}. I cannot trust you with the reponsibility of my golden wings.|")
             sleep(1)
-            print("|I hope you travel safely and good luck with your journey.                                                    |")
-            
+            print("| I hope you travel safely and good luck with your journey.                                                      |")
             miscStuffLib.lines(76)
+            return "lost"
+            
 
 quizdragon("start")

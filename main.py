@@ -57,10 +57,18 @@ while lives > 0 and game < 6:
         sleep(1)
         level = flyingRoute.route()
     elif game == 3:
+        print("You run into a cave...")
+        sleep(1)
         level = quiz.quizdragon(name)
     elif game == 4:
-        level = minefieldd.minefield()
+        if "golden wings" in inventory:
+            print("Those are some sweet wings! You get to fly over a minefield that you would've had to walk through!")
+        else:
+            print("You have to walk through a MINEFIELD!")
+            sleep(1)
+            level = minefieldd.minefield()
     elif game == 5:
+        sleep(1)
         level = battler.battler(inventory)
 
     if level == "lost":

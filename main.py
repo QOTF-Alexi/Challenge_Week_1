@@ -69,6 +69,8 @@ while lives > 0 and game < 6:
             level = minefieldd.minefield()
     elif game == 5:
         sleep(1)
+        print("You managed to beat your way through. But now you have to battle someone to win the planet back and restore peace!")
+        sleep(2)
         level = battler.battler(inventory)
 
     if level == "lost":

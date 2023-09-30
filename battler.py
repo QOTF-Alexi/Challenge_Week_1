@@ -45,7 +45,7 @@ def battler(inventory):
     playerLife = 101
     print(f"You will have to battle {chosenOne} to continue!")
     if chosenOne == "Desmond the moon bear":
-        print("They're wondering how they got here")
+        print("They're wondering how they got here. Use that knowledge.")
     else: ()
     sleep(1)
     while opponentLife > 0 and playerLife > 0:

@@ -39,4 +39,11 @@ def riddle_game():
         if if_right:
             score += 1
 
+    print("Congratulations on answering ")
+
 riddle_game()
+
+#pt 2 of the game 
+# with all the answers from the riddle they would need to form a word 
+#it'll work as a passcode to unlock the door to go outside the rocket 
+

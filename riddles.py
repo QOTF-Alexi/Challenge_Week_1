@@ -6,44 +6,45 @@ import miscStuffLib
 from time import sleep
 
 def riddle_game():
+    def ask_riddle(riddle, right_ans):
+        attempts = 0
 
-    def riddlequestion(riddle, right_ans):
-        attemps = 0
-
-        while attemps < 3   :
+        while attempts < 3:
             sleep(1)
-            miscStuffLib.lines(76)
             print(riddle)
-            input_ans = input("Your answer: ".format(attemps+1)).lower()
+            input_ans = input("Your answer: ".format(attempts + 1)).lower()
 
             if input_ans != right_ans:
-                attemps += 1
+                attempts += 1
                 print("Wrong answer. Please try again.")
-            
-            else: 
+            else:
                 print("Correct!")
-                
-        print("You've used up all your attemps. The correct answer is: {}".format(right_ans)) 
+                return True
 
+        print("You've used up all your attempts. The correct answer is: {}".format(right_ans))
+        return False
 
-    riddles = {"What is a five-letter word that becomes shorter when you add two letters to it?" : "short" ,
-               "What goes up but never goes down?": "age",
-               "Vonneke’s parents has three children: Jonneke and Lonneke. What’s the name of the third sister?": "vonneke" ,
-               "You see me once in June, twice in November and not at all in May. What am I?": "e"
+    riddles = {
+        "What is a five-letter word that becomes shorter when you add two letters to it?": "short",
+        "What goes up but never goes down?": "age",
+        "Vonneke’s parents have three children: Jonneke and Lonneke. What’s the name of the third sister?": "vonneke",
+        "You see me once in June, twice in November and not at all in May. What am I?": "e"
     }
 
-    score = 0
+    for riddle, right_ans in riddles.items():
+        if_right = ask_riddle(riddle, right_ans)
+        if not if_right:
+            break
 
-    for riddle,right_ans in riddles.items():
-        if_right = riddlequestion(riddle, right_ans)
-        if if_right:
-            score += 1
+       
 
-    print("Congratulations on answering ")
+    print("|Congratulations on completing the riddles!                                              |")
+    print("|Remember these answers well because you're going to need it to help you unlock the exit.|")
+    print("|Here is the scroll to help you decipher the code for the exit.")
+    return "scroll"
 
 riddle_game()
 
 #pt 2 of the game 
 # with all the answers from the riddle they would need to form a word 
 #it'll work as a passcode to unlock the door to go outside the rocket 
-

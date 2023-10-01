@@ -11,8 +11,10 @@ def riddle_game():
 
         while attempts < 3:
             sleep(1)
+            miscStuffLib.lines(80)
             print(riddle)
             input_ans = input("Your answer: ".format(attempts + 1)).lower()
+            print()
 
             if input_ans != right_ans:
                 attempts += 1
@@ -32,15 +34,17 @@ def riddle_game():
     }
 
     for riddle, right_ans in riddles.items():
-        if_right = ask_riddle(riddle, right_ans)
-        if not if_right:
-            break
+        ask_riddle(riddle, right_ans)
 
-       
-
+    print()
+    print()
+    miscStuffLib.lines(90)
+    print("|                                                                                        |")
     print("|Congratulations on completing the riddles!                                              |")
     print("|Remember these answers well because you're going to need it to help you unlock the exit.|")
-    print("|Here is the scroll to help you decipher the code for the exit.")
+    print("|Here is the scroll to help you decipher the code for the exit.                          |")
+    print("|                                                                                        |")
+    miscStuffLib.lines(90)
     return "scroll"
 
 riddle_game()
@@ -48,3 +52,15 @@ riddle_game()
 #pt 2 of the game 
 # with all the answers from the riddle they would need to form a word 
 #it'll work as a passcode to unlock the door to go outside the rocket 
+
+def doorcode():
+    password = "SAVE ERIS"
+
+    unlock_door = input("Enter the password to open the door: ")
+
+    if unlock_door.upper() == password:
+        print("Door unlocked. Welcome to planet Eris! May your adventures begin.")
+    else:
+        print("Incorrect passcode. The door remains locked. Please try again")
+
+#doorcode()

@@ -14,6 +14,7 @@ import flyingRoute
 import minefield
 import quiz
 import riddles
+import word_unscrambler
 
 lives = 3
 game = 0
@@ -47,7 +48,7 @@ else:
 
 
 # This runs continuously 
-while lives > 0 and game < 6:
+while lives > 0 and game < 7:
     print(f"You have {lives} lives.\n")
     game += 1
     sleep(5)
@@ -73,13 +74,18 @@ while lives > 0 and game < 6:
         sleep(1)
         level = quiz.quizdragon(name)
     elif game == 4:
+        print("You fall into a crater")
+        print("A voice in your head tells you the following:")
+        print("You are stuck inside this crater until you solve my game!")
+        level = word_unscrambler.word_unscrambler()
+    elif game == 5:
         if "golden wings" in inventory:
             print("Those are some sweet wings! You get to fly over a minefield that you would've had to walk through!")
         else:
             print("You have to walk through a MINEFIELD!")
             sleep(1)
             level = minefield.minefield()
-    elif game == 5:
+    elif game == 6:
         sleep(1)
         print("You managed to beat your way through. But now you have to battle someone to win the planet back and restore peace!")
         sleep(2)
@@ -107,13 +113,15 @@ while lives > 0 and game < 6:
             sleep(1)
             level = quiz.quizdragon(name)
         elif game == 4:
+            level = word_unscrambler.word_unscrambler()
+        elif game == 5:
             if "golden wings" in inventory:
                 print("Those are some sweet wings! You get to fly over a minefield that you would've had to walk through!")
             else:
                 print("You have to walk through a MINEFIELD!")
                 sleep(1)
                 level = minefield.minefield()
-        elif game == 5:
+        elif game == 6:
             sleep(1)
             print("You managed to beat your way through. But now you have to battle someone to win the planet back and restore peace!")
             sleep(2)

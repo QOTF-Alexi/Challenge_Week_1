@@ -22,7 +22,7 @@ def word_unscrambler():
 
     correct_guesses = 0
 
-    for i in range(6):
+    for guess_count in rage (6):
         chosen_word = random.choice(valid_words)
         valid_words.remove(chosen_word)
 
@@ -34,19 +34,18 @@ def word_unscrambler():
 
         print("Round " + str(guess_count + 1) + ": Unscramble the word: " + scrambled_word)
         
-        while True:
-            user_guess = input("Enter a valid English word: ").lower()
+    
+        user_guess = input("Enter a valid English word: ").lower()
 
-            if user_guess == chosen_word:
-                miscStuffLib.lines(70)
-                print("Correct! You unscrambled the word.")
-                correct_guesses += 1
-                break
-            else:
-                miscStuffLib.lines(70)
-                print("Try again. It's not the same as the scrambled word.")
+        if user_guess == chosen_word:
+            miscStuffLib.lines(70)
+            print("Correct! You unscrambled the word.")
+            correct_guesses += 1
+        
+        else:
+            miscStuffLib.lines(70)
+            print("Try again. It's not the same as the scrambled word.")
 
-        guess_count += 1
 
     if correct_guesses == 6:
         miscStuffLib.lines(70)
@@ -55,3 +54,5 @@ def word_unscrambler():
         miscStuffLib.lines(70)
         print("You have made too many mistakes. You only unscrambled", correct_guesses, "words correctly. Because of that you will stay here forever!")
         return "lost"
+    
+    word_unscrambler()

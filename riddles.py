@@ -39,13 +39,13 @@ def riddle_game():
     print()
     print()
     miscStuffLib.lines(90)
-    print("|                                                                                        |")
-    print("|Congratulations on completing the riddles!                                              |")
-    print("|Remember these answers well because you're going to need it to help you unlock the exit.|")
-    print("|Here is the scroll to help you decipher the code for the exit.                          |")
-    print("|                                                                                        |")
+    print("|                                                                                               |")
+    print("|Congratulations on completing the riddles! The correct answers were: Short, Age, Vonneke and E.|")
+    print("|Remember these answers well because you're going to need it to help you unlock the exit.       |")
+    print("|Here is the scroll to help you decipher the code for the exit.                                 |")
+    print("|                                                                                               |")
     miscStuffLib.lines(90)
-    return "scroll"
+    return "projector device"
 
 riddle_game()
 

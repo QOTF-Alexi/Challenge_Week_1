@@ -11,21 +11,21 @@ from time import sleep
 
 def quizdragon(name):
 
-    miscStuffLib.lines(115)
-    print("|Thou who is courageous enough to enter Veldora's Den shall be given the chance to recieve thy blessing.           |")
+    miscStuffLib.lines(117)
+    print("| Thou who is courageous enough to enter Veldora's Den shall be given the chance to recieve thy blessing.           |")
     sleep(1)
-    print("|Welcome young traveller! I am the Star Dragon Veldora of planet Eris.                                             |")
+    print("| Welcome young traveller! I am the Star Dragon Veldora of planet Eris.                                             |")
     sleep(1)
-    print("|You've woken me from my deep slumber and choose to enter my den.                                                  |")
+    print("| You've woken me from my deep slumber and choose to enter my den.                                                  |")
     sleep(1)
-    print("|You will be asked a series of questions and your correct answers will determine if you are worthy of my blessing. |")
+    print("| You will be asked a series of questions and your correct answers will determine if you are worthy of my blessing. |")
     sleep(1)
-    print("|Good luck!                                                                                                        |")
+    print("| Good luck!                                                                                                        |")
     sleep(1)
     
-    miscStuffLib.lines(115)
+    miscStuffLib.lines(117)
 
-    start = input("Type \"START\" to start the quiz")
+    start = input("Type \"START\" to start the quiz: ")
     if start == "start":
 
         questions = ("What is the name of the dragon that is bestowing you one of its heavenly gifts?",
@@ -39,7 +39,7 @@ def quizdragon(name):
                 ("A. Pacific Ocean","B. Atlantic Ocean","C. Indian Ocean", "D. Artic Ocean"),
                 ("A. Airis","B. Esis","C.Arsis", "D. Eris"),
                 ("A. Antartica","B. South America","C. Africa", "D. Australia/Oceania"),
-                ("A. Vancouver","B. Ottowa","C. Toronto", "D. Québec"),
+                ("A. Vancouver","B. Ottawa","C. Toronto", "D. Québec"),
                 ("A. Cornelly","B. Cornelius","C. Cornelis", "D. Cornelion")
                 )
         
@@ -55,7 +55,7 @@ def quizdragon(name):
             for c in choices[numbering]:
                 print(c)
             
-            input_answer = input("Choose (A, B, C or D)").upper()
+            input_answer = input("Choose (A, B, C or D) ").upper()
             if input_answer == right_answers[numbering]:
                 points += 1
                 print("That is correct. Good Job!")
@@ -65,42 +65,44 @@ def quizdragon(name):
             
             numbering += 1
         
-        miscStuffLib.lines(76)
+        miscStuffLib.lines(77)
 
         result = int(points)
-        print(f"| Your total score is {result}/6.                                                 |")
+        print("| Your total score is ", result, "/6", " "*51, "|", sep="")
         sleep(1)
-        print("| I shall now determine if you are worthy of the gift based on your points.|")
+        print("| I shall now determine if you are worthy of the gift based on your points. |")
 
-        miscStuffLib.lines(76)
+        miscStuffLib.lines(77)
 
         print()
         print()
 
         if result > 4: #gives the player an item 
 
-            miscStuffLib.lines(76)
+            miscStuffLib.lines((112+len(name)))
 
-            print(f"|Congratulations {name}! You are more than worthy to recieve my gift. I shall bestow a replica of my Golden Wings.|")
+            print("| Congratulations ", name, "! You are more than worthy to recieve my gift. I shall bestow a replica of my Golden Wings.  |", sep="")
             sleep(1)
-            print("|Although you can not use it to its full potential, you will still be able to travel the planet more easier.     |")
+            print("| Although you can not use it to its full potential, you will still be able to travel the planet more easier.", " "*(2+len(name)), "|", sep="")
             sleep(1)
-            print("|You are able to use this gift to skip a obstacle once in your journey ahead.                                    |")
+            print("| You are able to use this gift to skip a obstacle once in your journey ahead.", " "*(33+len(name)), "|", sep="")
             sleep(1)
-            print("|Best of luck and have a safe journey.                                                                           |")
+            print("| Best of luck and have a safe journey.", " "*(72+len(name)), "|", sep="")
         
-            miscStuffLib.lines(76)
+            miscStuffLib.lines((112+len(name)))
 
             return "golden wings"
 
 
         else: #player continues without item
-            miscStuffLib.lines(76)
+            miscStuffLib.lines((108+len(name)))
             
-            print(f"|You almost had it, but it's unfortunate, {name}. I cannot trust you with the reponsibility of my golden wings.|")
+            print("| You almost had it, but it's unfortunate, ", name, ". I cannot trust you with the reponsibility of my golden wings. |", sep="")
             sleep(1)
-            print("|I hope you travel safely and good luck with your journey.                                                    |")
+            print("| I hope you travel safely and good luck with your journey.", " "*(48+len(name)), "|", sep="")
             
-            miscStuffLib.lines(76)
+            miscStuffLib.lines((108+len(name)))
+
+            return "lost"
 
 quizdragon("start")

@@ -17,7 +17,7 @@ import riddles
 
 lives = 3
 game = 0
-inventory = ["unlimited oxygen tank"]
+inventory = ["unlimited oxygen tank", "motivator"]
 
 # Startup sequence
 miscStuffLib.clear()
@@ -59,6 +59,16 @@ while lives > 0 and game < 6:
         sleep(1)
         level = flyingRoute.route()
     elif game == 3:
+        print("You are walking over a plain and feel something in your pocket.")
+        sleep(1)
+        print("It's a project box that has text in marker on it: \"M o t i v a t o r\"")
+        sleep(1)
+        print("Upon clicking the single button it has, a hologram of Arjen Oostdijk and Hossein Chamani appears!")
+        sleep(0.5)
+        print("They say \"Not to demotivate, but you must run as fast as you can. We know you can do this!")
+        sleep(0.5)
+        print("\"... Go save the planet now you still can, you got this!\"")
+        sleep(5)
         print("You run into a cave...")
         sleep(1)
         level = quiz.quizdragon(name)
@@ -129,10 +139,14 @@ else:
     if "return" in endIn:
         print("You suddenly pass out.")
         sleep(0.5)
-        print("And you wake up, with a scale model of a planet in your hand, somehow.")
+        print("And you wake up in your bedroom, with a scale model of a planet in your hand, somehow.")
+        sleep(0.3)
+        print("The alarm clock on your bedside table is making a lot of noise. Why is that? Oh you're late for school!")
     elif "stay" in endIn:
         print("So you chose to stay, huh? Solid choice!")
         sleep(0.5)
         print("And now it's time to build your kingdom! You get a device that can generate structures nearly instantly.")
+        sleep(0.3)
+        print("You've gotten quite hungry from this endeavour. How about making a food factory?")
     else:
         print("You just got wiped off the face of the planet because you couldn't choose.")

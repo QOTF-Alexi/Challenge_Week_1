@@ -13,10 +13,10 @@ def word_unscrambler():
     print()
     print("While wandering the planet you suddenly step into the wrong place and you fall into a deep hole. Your gaze starts going black.")
     sleep(0.75)
-    print("You wake up abruptly and look around. You realize you're in a crater. The crater is filled with huge letters.")
+    print("You wake up and look around abruptively. You realize you're in a crater. The crater is filled with huge diferrent sizes of letters.")
     sleep(0.75)
-    print("You hear rumbling sounds coming out of nowhere and you see some a creature suddenly appearing in front of you.")
-    sleep(0.5)
+    print("You hear rumbling sounds coming out of nowhere and you see some creature suddenly appearing in front of you.")
+    sleep(0.75)
     print()
     print()
     print(r"""
@@ -95,11 +95,24 @@ def word_unscrambler():
 
     if correct_guesses == 6:
         miscStuffLib.lines(70)
-        print("You have unscrambled all the words correctly. Good job!")
-        return "voice recorder"
+        print("|Congratulations! You have unscrambled all the words correctly. Good job!  |")
+        sleep(0.75)
+        print("|For completing the game you get an item drop. It's a voice message device.|")
+        sleep(0.75)
+        print("|This will be needed for future purposes, keep it safely.                  |")
+        sleep(0.75)
+        miscStuffLib.lines(70)
+        
+        return "voice message"
+
     else:
         miscStuffLib.lines(70)
-        print("You have made too many mistakes. You only unscrambled", correct_guesses, "words correctly. Because of that you will stay here forever!")
+        print("|You have made too many mistakes. You only unscrambled", correct_guesses, "words correctly.|")
+        sleep(0.75)
+        print("|Because of that you will stay here forever!                                               |")
+        sleep(0.75)
+        miscStuffLib.lines(70)
+
         return "lost"
     
-#word_unscrambler()
+word_unscrambler()

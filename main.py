@@ -87,7 +87,7 @@ while lives > 0 and game < 7:
         else:
             print("You have to walk through a MINEFIELD!")
             sleep(1)
-            level = minefield.minefield()
+            level = minefield.minefield(inventory)
     elif game == 6:
         sleep(1)
         print("You managed to beat your way through. But now you have to battle someone to win the planet back and restore peace!")

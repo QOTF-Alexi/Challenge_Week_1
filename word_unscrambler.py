@@ -80,17 +80,17 @@ def word_unscrambler():
 
         print("Round " + str(guess_count + 1) + ": Unscramble the word: " + scrambled_word)
         
-    
-        user_guess = input("Enter a valid English word: ").lower()
+        for remaining_attempts in range(6, 0, -1):
+            user_guess = input("Attempts left: " + str(remaining_attempts) +"   " +"Enter a valid English word: ").lower()
 
-        if user_guess == chosen_word:
-            miscStuffLib.lines(70)
-            print("Correct! You unscrambled the word.")
-            correct_guesses += 1
+            if user_guess == chosen_word:
+                miscStuffLib.lines(70)
+                print("Correct! You unscrambled the word.")
+                correct_guesses += 1
         
-        else:
-            miscStuffLib.lines(70)
-            print("Try again. It's not the same as the scrambled word.")
+            else:
+                miscStuffLib.lines(70)
+                print("Try again. It's not the same as the scrambled word.")
 
 
     if correct_guesses == 6:
@@ -101,4 +101,4 @@ def word_unscrambler():
         print("You have made too many mistakes. You only unscrambled", correct_guesses, "words correctly. Because of that you will stay here forever!")
         return "lost"
     
-word_unscrambler()
+word_unscrambler() 

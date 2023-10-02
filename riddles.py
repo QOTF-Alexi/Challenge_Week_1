@@ -1,6 +1,7 @@
 # player answers riddles to get words difficulty = easy
 # players then needs to decipher a word from the riddle answers
 # the deciphered word is needed to unlock a room with an item [Voice message device] 
+# 
 
 import miscStuffLib
 from time import sleep

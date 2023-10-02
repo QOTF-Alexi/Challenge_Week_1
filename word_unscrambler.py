@@ -6,25 +6,44 @@ written by: No'railly
 '''
 import miscStuffLib
 import random
-from time import sleep
-
 
 def word_unscrambler():
+    print()
+    print(r"""
+                                         ,|
+                             //|                              ,|
+                           //,/                             -~ |
+                         // / |                         _-~   /  ,
+                       /'/ / /                       _-~   _/_-~ |
+                      ( ( / /'                   _ -~     _-~ ,/'
+                       \~\/'/|             __--~~__--\ _-~  _/,
+               ,,)))))));, \/~-_     __--~~  --~~  __/~  _-~ /
+            __))))))))))))));,>/\   /        __--~~  \-~~ _-~
+           -\(((((''''(((((((( >~\/     --~~   __--~' _-~ ~|
+  --==//////((''  .     `)))))), /     ___---~~  ~~\~~__--~
+          ))| @    ;-.     (((((/           __--~~~'~~/
+          ( `|    /  )      )))/      ~~~~~__\__---~~__--~~--_
+             |   |   |       (/      ---~~~/__-----~~  ,;::'  \         ,
+             o_);   ;        /      ----~~/           \,-~~~\  |       /|
+                   ;        (      ---~~/         `:::|      |;|      < >
+                  |   _      `----~~~~'      /      `:|       \;\_____//
+            ______/\/~    |                 /        /         ~------~
+          /~;;.____/;;'  /          ___----(   `;;;/
+         / //  _;______;'------~~~~~    |;;/\    /
+        //  | |                        /  |  \;;,\
+       (<_  | ;                      /',/-----'  _>
+        \_| ||_                     //~;~~~~~~~~~
+            `\_|                   (,~~
+                                    \~\
+                                     ~          
+          """)
+    print("|Hello young traveller. Welcome to The letter Crater.|")
+    print("|You fell in here and got TRAPPED! To get out you need to play a game.|")
+    print("|In this game you need to unscramble all the words that are given to you.|")
+    print("|Only when you scramble 6 words correctcly, you will be teleported out of here.|")
+    print("|If not you will be stuck here forever! Good luck|")
 
-    miscStuffLib.lines(94)
-
-    print("|Hello young traveller. Welcome to The letter Crater.                                        |")
-    sleep(0.75)
-    print("|You unfortunately fell in here and got TRAPPED! To get out you need to play a game.         |")
-    sleep(0.75)
-    print("|In this game you need to unscramble all the words that are given to you.                    |")
-    sleep(0.75)
-    print("|Only when you scramble 6 words correctcly, you will be teleported out of here.              |")
-    sleep(0.75)
-    print("|If not you will be stuck here forever! Good luck.                                           |")
-    sleep(0.75)
-
-    miscStuffLib.lines(94)
+    miscStuffLib.lines(70)
     
     valid_words = ["windows", "basecamp", "laptop", "challenge", "backpack", "python"]
 

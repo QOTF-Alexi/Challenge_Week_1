@@ -37,8 +37,10 @@ def word_unscrambler():
 
     if correct_guesses == 6:
         print("You have unscrambled all the words correctly. Good job!")
+        return "voice recorder"
     else:
         print("You have completed the game. You unscrambled", correct_guesses, "words correctly.")
+        return "lost"
 
 
 

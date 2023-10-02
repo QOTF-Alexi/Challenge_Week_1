@@ -15,7 +15,7 @@ import minefield
 import quiz
 import riddles
 
-lives = 5
+lives = 3
 game = 0
 inventory = ["unlimited oxygen tank"]
 
@@ -81,6 +81,9 @@ while lives > 0 and game < 6:
         print("No drops, no loss")
     elif level == "breadUsed":
         inventory.remove("garlicbread")
+    elif level == "plusLife":
+        print("You got a plus-life card! That gives one extra life.")
+        lives += 1
     else:
         inventory.append(level)
 

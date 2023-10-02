@@ -39,7 +39,7 @@ def hard():
     answer = int(input("Please? "))
     if answer == int(2**+2**0+8/4):
         print("\"That is indeed correct\", the robot says.")
-        return "drop"
+        return "plusLife"
     else:
         print("Nope. But you'll be spared.")
 

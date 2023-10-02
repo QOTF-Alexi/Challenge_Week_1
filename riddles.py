@@ -142,8 +142,13 @@ def doorcode():
     unlock_door = input("Enter the password to open the door: ")
 
     if unlock_door.upper() == password:
-        print()
-        print("Door unlocked. Congratulations! Welcome to planet Eris! May your adventures begin.")
+        
+        miscStuffLib.lines(70)
+        print("|Door unlocked. Congratulations! Welcome to planet Eris! May your adventures begin.|")
+        sleep(0.75)
+        print("|As a reward for completing your first game you will be given a +1 life card.      |")
+        miscStuffLib.lines(70)
+        
         return "plusLife"
     else:
         print()

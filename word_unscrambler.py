@@ -11,11 +11,11 @@ from time import sleep
 def word_unscrambler():
 
     print()
-    print("While wandering the planet you suddenly stepped on the wrong place and fell into a deep hole. Your gaze started going black.")
+    print("While wandering the planet you suddenly step into the wrong place and you fall into a deep hole. Your gaze starts going black.")
     sleep(0.75)
-    print("You wake up abruptively and looked around. You realize you're in a crater. The crater is filled with blocks of letters.")
+    print("You wake up abruptly and look around. You realize you're in a crater. The crater is filled with huge letters.")
     sleep(0.75)
-    print("You here rumbling sounds coming out of nowhere and you see some creature suddenly appearing in front of you.")
+    print("You hear rumbling sounds coming out of nowhere and you see some a creature suddenly appearing in front of you.")
     sleep(0.5)
     print()
     print()

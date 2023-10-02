@@ -104,5 +104,5 @@ def word_unscrambler():
         print("You have made too many mistakes. You only unscrambled", correct_guesses, "words correctly. Because of that you will stay here forever!")
     
 
-word_unscrambler()
+#word_unscrambler()
 

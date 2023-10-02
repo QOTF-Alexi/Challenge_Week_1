@@ -55,6 +55,9 @@ while lives > 0 and game < 7:
     miscStuffLib.clear()
     if game == 1:
         level = riddles.riddle_game()
+        print("With that done, you can try to open the door. should you fail, you might have to re-try.")
+        sleep(1)
+        level = riddles.doorcode()
     elif game == 2:
         print("You managed to get out, but now you have to choose a path to take!")
         sleep(1)
@@ -101,31 +104,10 @@ while lives > 0 and game < 7:
         print("You got a plus-life card! That gives one extra life.")
         lives += 1
     elif level == "retry":
-        # I AM SO SORRY FOR THIS. Glory to langs that don't require structure.
         if game == 1:
-            level = riddles.riddle_game()
-        elif game == 2:
-            print("You managed to get out, but now you have to choose a path to take!")
-            sleep(1)
-            level = flyingRoute.route()
-        elif game == 3:
-            print("You run into a cave...")
-            sleep(1)
-            level = quiz.quizdragon(name)
-        elif game == 4:
-            level = word_unscrambler.word_unscrambler()
-        elif game == 5:
-            if "golden wings" in inventory:
-                print("Those are some sweet wings! You get to fly over a minefield that you would've had to walk through!")
-            else:
-                print("You have to walk through a MINEFIELD!")
-                sleep(1)
-                level = minefield.minefield()
-        elif game == 6:
-            sleep(1)
-            print("You managed to beat your way through. But now you have to battle someone to win the planet back and restore peace!")
-            sleep(2)
-            level = battler.battler(inventory)
+            while level == "retry":
+                print("Seems you did not get the hint. Try again.")
+                #Runs infinitely
     else:
         inventory.append(level)
 

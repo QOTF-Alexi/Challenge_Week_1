@@ -9,7 +9,7 @@ from random import randint
 def medium():
     pi = 3.14159
 
-    print("You have to calculate the circumference of a circle!")
+    print("You are trapped in this hypercube and to get out, you have to calculate the circumference of a circle!")
     print("The formula is 2*pi*r, but what was pi again?")
     inpi = float(input("Enter the number pi with 5 decimals precision "))
     if inpi == pi:
@@ -23,7 +23,7 @@ def medium():
 def easy():
     num1 = randint(0, 50)
     num2 = randint(0, 50)
-    print("You need to cross a crater, but for that, you need to calculate the required length for a bridge.")
+    print("You are trapped in this hypercube and to get out, you need to calculate the size of a side.")
     print(f"Please calculate {num1}+{num2}")
     num3 = int(input("Please? "))
     if num3 == num1+num2:
@@ -34,7 +34,7 @@ def easy():
         return "lost"
 
 def hard():
-    print("Some robot in a space suit wants to ask you the following:")
+    print("You are trapped inside a hypercube. Some robot in a space suit will let you out but wants to ask you the following:")
     print("Please solve 2^3+2^0+8/4")
     answer = int(input("Please? "))
     if answer == int(2**+2**0+8/4):

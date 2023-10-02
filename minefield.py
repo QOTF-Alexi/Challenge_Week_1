@@ -67,4 +67,3 @@ def minefield(inventory):
     else:
         print("You've exceeded the maximum number of guesses. Game over.")
         return "lost"
-

@@ -8,8 +8,10 @@ import miscStuffLib
 import battler_debug
 import flyingRoute
 import mathLol
-import minefieldd
+import minefield
 import quiz
+import riddles
+import word_unscrambler
 
 def debug():
     miscStuffLib.lines(28)
@@ -39,9 +41,23 @@ def debug():
     print("Quiz test completed.")
 
     miscStuffLib.lines(28)
+    print("Starting riddlegame. Get all correct")
+    riddles.riddle_game()
+    print("Starting again. Get all incorrect")
+    riddles.riddle_game()
+    print("riddlegame test completed.")
+
+    miscStuffLib.lines(28)
+    print("Starting unscrambler. Get all correct")
+    word_unscrambler.word_unscrambler()
+    print("Starting again. Get all incorrect")
+    word_unscrambler.word_unscrambler()
+    print("unscrambler test completed.")
+
+    miscStuffLib.lines(28)
     print("Starting minefield. Get all correct.")
-    minefieldd.minefield()
+    minefield.minefield()
     print("Starting again. Get all incorrect.")
-    minefieldd.minefield()
+    minefield.minefield()
     print("Minefield test completed.")
     quit()

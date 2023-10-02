@@ -143,6 +143,7 @@ def doorcode():
     if unlock_door.upper() == password:
         print()
         print("Door unlocked. Congratulations! Welcome to planet Eris! May your adventures begin.")
+        return "plusLife"
     else:
         print()
         print("Incorrect passcode. The door remains locked. Please try again.")

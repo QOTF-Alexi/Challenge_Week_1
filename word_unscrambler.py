@@ -96,6 +96,7 @@ def word_unscrambler():
     if correct_guesses == 6:
         miscStuffLib.lines(70)
         print("You have unscrambled all the words correctly. Good job!")
+        return "voice recorder"
     else:
         miscStuffLib.lines(70)
         print("You have made too many mistakes. You only unscrambled", correct_guesses, "words correctly. Because of that you will stay here forever!")

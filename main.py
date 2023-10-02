@@ -88,6 +88,7 @@ while lives > 0 and game < 7:
             level = minefield.minefield()
     elif game == 6:
         sleep(1)
+        print("This final game will be held inside a makeshift arena! Allies and enemies have gathered to come and see you battle the current ruler of Eris!")
         print("You managed to beat your way through. But now you have to battle someone to win the planet back and restore peace!")
         sleep(2)
         level = battler.battler(inventory)

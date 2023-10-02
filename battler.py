@@ -44,7 +44,58 @@ def battler(inventory):
     opponentLife = 100
     playerLife = 101
     print(f"You will have to battle {chosenOne} to continue!")
-    if chosenOne == "Desmond the moon bear":
+    if chosenOne == "The vampire":
+        print(r"""
+                 /######\
+               /##########\
+              /   \###/    \
+             /     \#/      \
+          /\|               |/\
+          | | \ ==\    /== / | |
+           \|  \<|>\  /<|>/  |/     /|
+    \__     |    -   \  -    |     /#|
+     \#\     |        |      |   /###|
+      \##\   |       \|     |  /#####|
+       \###\  |   _______  | /######|
+        \####\ | / \/ \/ \|/#######|
+        |######\|        |#########|
+        |########\______/##########|
+        |#########\    /##########/
+        |##########\  |#########/\
+        /###########\/########/###\
+    /################\######/########\
+   /##################\###/###########\
+  /###################\#/##############\
+ /####################/#################\
+/###################/####################\
+        """)
+    elif chosenOne == "The very dangerous sheep":
+        print(r"""
+                 .--/|
+               o' "   `.. - - - - .
+                `""\                `.
+                    `.   }    {    /\|
+                      \  |"- -"\   |
+                      || |     >> /
+               \\|/   ||_|    //_/        \|/
+                                    \|//
+              """)
+    elif chosenOne == "Desmond the moon bear":
+        print(r"""
+              
+        (()__(()
+        /       \
+       ( /    \  \
+        \ o o    /
+        (_()_)__/ \
+       / _,==.____ \
+      (   |--|      )
+      /\_.|__|'-.__/\_
+     / (        /     \
+     \  \      (      /
+      )  '._____)    /
+   (((____.--(((____/
+              """)
         print("They're wondering how they got here. Use that knowledge.")
     else: ()
     sleep(1)
@@ -201,3 +252,5 @@ def battler(inventory):
             return "breadUsed"
         else:
             return "lost"
+        
+battler("garlicbread")

@@ -6,11 +6,17 @@ written by: no'railly
 '''
 
 import miscStuffLib
-import time
+from time import sleep
+
 
 def minefield(inventory):
-    print("|You have arrived at your next location.|")
-    print("|In front of you is a minefield.        |")
+
+    print("|You have arrived at your next location.                                         |")
+    sleep(0.75)
+    print("|In front of you is a minefield.                                                 |")
+    sleep(0.75)
+    print("|If you have the voice recorder you'll automatically have the option to play it. |")
+    sleep(0.75)
 
     if "voice recorder" in inventory:
 
@@ -36,7 +42,7 @@ def minefield(inventory):
             words = line.split()
             for word in words:
                 print(word, end=" ")
-                time.sleep(0.3)  
+                sleep(0.3)  
         print()
 
     else:
@@ -67,3 +73,6 @@ def minefield(inventory):
     else:
         print("You've exceeded the maximum number of guesses. Game over.")
         return "lost"
+
+
+minefield("inventory")

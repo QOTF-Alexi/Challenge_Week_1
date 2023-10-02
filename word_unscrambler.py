@@ -22,7 +22,7 @@ def word_unscrambler():
 
     correct_guesses = 0
 
-    for guess_count in rage (6):
+    for guess_count in range (6):
         chosen_word = random.choice(valid_words)
         valid_words.remove(chosen_word)
 
@@ -55,4 +55,4 @@ def word_unscrambler():
         print("You have made too many mistakes. You only unscrambled", correct_guesses, "words correctly. Because of that you will stay here forever!")
         return "lost"
     
-    word_unscrambler()
+word_unscrambler()

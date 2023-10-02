@@ -63,7 +63,9 @@ while lives > 0 and game < 7:
         sleep(1)
         level = flyingRoute.route()
     elif game == 3:
-        print("You are walking over a plain and feel something in your pocket.")
+        print("You are walking over a plain. A desolate place, for sure. there's some piles of grey rocks, but no vegetation at all.")
+        sleep(0.5)
+        print("Suddenly, you feel something in your pocket.")
         sleep(1)
         print("It's a project box that has text in marker on it: \"M o t i v a t o r\"")
         sleep(1)

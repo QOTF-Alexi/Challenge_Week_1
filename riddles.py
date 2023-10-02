@@ -38,18 +38,29 @@ def riddle_game():
     print("In the window it says: ")
     sleep(0.75)
     print()
-    miscStuffLib.lines(100)
-    print("|Congratulations on finding the exit! To open the door you would need to enter a password.         |")
+    miscStuffLib.lines(107)
+    print("|Congratulations on finding the exit! To open the door you would need to enter a password.                 |")
     sleep(0.75)
-    print("|But first you would need to play a game to get hints on what the password is.                     |")
+    print("|But first you would need to play a game to get hints on what the password is.                             |")
     sleep(0.75)
-    print("|The game is simple. You just need to answer a bunch of riddles. You have 3 attemps on each riddle.|")
+    print("|The game is simple. You just need to answer a bunch of riddles. You have 3 attemps on each riddle.        |")
     sleep(0.75)
-    print("|Remember each correct answer. You're gonna need it for the password.                              |")
+    print("|Remember each correct answer. You're gonna need it for the password.                                      |")
     sleep(0.75)
-    print("|Good luck!                                                                                        |")
+    print("|You will be now teleported to a place called Mind Space. You might pass out for awhile but you'll be fine.|")
     sleep(0.75)
-    miscStuffLib.lines(100)
+    print("|Good luck and sleep tight!                                                                                |")
+    sleep(0.75)
+    miscStuffLib.lines(107)
+    
+    print(".")
+    print(".")
+    print(".")
+    print(".")
+    print(".")
+    print(".")
+    print(".")
+    
 
     riddles = {
         "What is a five-letter word that becomes shorter when you add two letters to it?": "short",
@@ -60,14 +71,24 @@ def riddle_game():
 
     ready_input = ""
     while ready_input.upper() != "READY":
-        ready_input = input("To start the game type \"READY\".")
+        
+        miscStuffLib.lines(97)
+        print("|You wake up again after passing out. You look below and you see yourself strapped into a chair.|")
+        sleep(0.75)
+        print("|You look around and it looks like a school classroom.                                          |")
+        sleep(0.75)
+        print("|Suddenly a new pop-up window appeared in front of you. \"Type in \'READY\' to start the game.\"    |")
+        sleep(0.75)
+        miscStuffLib.lines(97)
+        
+        ready_input = input()
         if ready_input.upper() == "READY":
+            miscStuffLib.clear()
             for riddle, right_ans in riddles.items():
                 ask_riddle(riddle, right_ans)
         else:
             print("That was not correct!")
 
-    
 
     print()
     print()
@@ -131,6 +152,7 @@ def doorcode():
     
     print()
     print()
+    print()
     
     print("The device suddenly closed. You go to the door and clicked on the tablet to enter the password.")
     sleep(0.5)
@@ -148,7 +170,7 @@ def doorcode():
         sleep(0.75)
         print("|As a reward for completing your first game you will be given a +1 life card.      |")
         miscStuffLib.lines(70)
-        
+
         return "plusLife"
     else:
         print()

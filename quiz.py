@@ -12,14 +12,14 @@ from time import sleep
 def quizdragon(name):
 
     print()
-    print("You entered the den and immediately feel chills in your spine. The den is filled with bones and suddenly smell something funny.")
+    print("You entered the den and immediately feel chills in your spine. The den is filled with bones and suddenly you smell something funny.")
     sleep(1)
     print("Then you realize that you can't smell in space and you're just smelling yourself. lol ")
     sleep(1)
     print("After looking around the den you come across a big door and decide to enter it. Then you suddenly hear a loud voice.")
     sleep(1)
     print("You suddenly see something appear from the shadows in front of you.")
-    sleep(2)
+    sleep(1)
 
     print(r"""
 
@@ -62,6 +62,8 @@ def quizdragon(name):
 
     start = input("Type \"START\" to start the quiz: ")
     if start.lower(  ) == "start":
+        
+        miscStuffLib.clear()
 
         questions = ("What is the name of the dragon that is bestowing you one of its heavenly gifts?",
                     "Which ocean is the biggest ocean in the world?",

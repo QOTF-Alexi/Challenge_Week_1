@@ -84,6 +84,30 @@ while lives > 0 and game < 6:
     elif level == "plusLife":
         print("You got a plus-life card! That gives one extra life.")
         lives += 1
+    elif level == "retry":
+        # I AM SO SORRY FOR THIS. Glory to langs that don't require structure.
+        if game == 1:
+            level = riddles.riddle_game()
+        elif game == 2:
+            print("You managed to get out, but now you have to choose a path to take!")
+            sleep(1)
+            level = flyingRoute.route()
+        elif game == 3:
+            print("You run into a cave...")
+            sleep(1)
+            level = quiz.quizdragon(name)
+        elif game == 4:
+            if "golden wings" in inventory:
+                print("Those are some sweet wings! You get to fly over a minefield that you would've had to walk through!")
+            else:
+                print("You have to walk through a MINEFIELD!")
+                sleep(1)
+                level = minefield.minefield()
+        elif game == 5:
+            sleep(1)
+            print("You managed to beat your way through. But now you have to battle someone to win the planet back and restore peace!")
+            sleep(2)
+            level = battler.battler(inventory)
     else:
         inventory.append(level)
 

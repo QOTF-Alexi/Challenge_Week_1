@@ -11,13 +11,13 @@ import miscStuffLib  # Imports the miscStuffLib.py file as a library.
 import battler
 import debugger
 import flyingRoute
-import minefieldd
+import minefield
 import quiz
 import riddles
 
-lives = 5
+lives = 3
 game = 0
-inventory = []
+inventory = ["unlimited oxygen tank"]
 
 # Startup sequence
 miscStuffLib.clear()
@@ -41,6 +41,8 @@ else:
     print("Your objective will become more clear throughout the game.")
     sleep(0.3)
     print("Whomever put you into this rocket did leave a note saying you're going to a planet in need of help.")
+    sleep(0.3)
+    print("And you got an unlimited oxygen tank to start with")
     sleep(0.3)
 
 
@@ -66,7 +68,7 @@ while lives > 0 and game < 6:
         else:
             print("You have to walk through a MINEFIELD!")
             sleep(1)
-            level = minefieldd.minefield()
+            level = minefield.minefield()
     elif game == 5:
         sleep(1)
         print("You managed to beat your way through. But now you have to battle someone to win the planet back and restore peace!")
@@ -79,6 +81,9 @@ while lives > 0 and game < 6:
         print("No drops, no loss")
     elif level == "breadUsed":
         inventory.remove("garlicbread")
+    elif level == "plusLife":
+        print("You got a plus-life card! That gives one extra life.")
+        lives += 1
     else:
         inventory.append(level)
 
@@ -95,14 +100,15 @@ else:
     sleep(0.3)
     print("You can choose to return to your home planet and you will forget everything that happened.")
     print("Or, you can stay here, on Eris, and build up your kingdom!")
-    endIn = input("What will you choose? ")
+    print("You will either get a device that will assist you in your kingdom, or a beautiful scale model of Eris.")
+    endIn = input("What will you choose? (return or stay) ")
     if "return" in endIn:
         print("You suddenly pass out.")
         sleep(0.5)
-        print("And you wake up, late for school!")
+        print("And you wake up, with a scale model of a planet in your hand, somehow.")
     elif "stay" in endIn:
         print("So you chose to stay, huh? Solid choice!")
         sleep(0.5)
-        print("And now it's time to build your kingdom!")
+        print("And now it's time to build your kingdom! You get a device that can generate structures nearly instantly.")
     else:
         print("You just got wiped off the face of the planet because you couldn't choose.")

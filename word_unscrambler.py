@@ -8,6 +8,19 @@ import miscStuffLib
 import random
 
 def word_unscrambler():
+    print(r"""
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          """)
     print("|Hello young traveller. Welcome to The letter Crater.|")
     print("|You fell in here and got TRAPPED! To get out you need to play a game.|")
     print("|In this game you need to unscramble all the words that are given to you.|")

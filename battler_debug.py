@@ -25,7 +25,12 @@ damageDealers = {
     "Desmond the moon bear": ["How did I get here", "bite", "scratch", "run into"]
 }
 
-def proposeAttacks(inventory, chosenOne):
+chosenOne = characters[randint(0, 2)]
+liGoodAttacks = goodAttacks[chosenOne]
+liDamageDealers = damageDealers[chosenOne]
+
+
+def proposeAttacks(inventory):
     proposedAttacks = goodAttacks[chosenOne]
     if "garlicbread" in inventory:
         if "garlicbread" not in proposedAttacks:
@@ -38,12 +43,13 @@ def proposeAttacks(inventory, chosenOne):
 def battler(inventory):
     test = 0
     while test < 3:
-        chosenOne = characters[test]
-        liGoodAttacks = goodAttacks[chosenOne]
-        liDamageDealers = damageDealers[chosenOne]
+        breadUsed = 0
         opponentLife = 100
         playerLife = 101
         print(f"You will have to battle {chosenOne} to continue!")
+        if chosenOne == "Desmond the moon bear":
+            print("They're wondering how they got here. Use that knowledge.")
+        else: ()
         sleep(1)
         while opponentLife > 0 and playerLife > 0:
             if chosenOne == "The vampire":
@@ -51,10 +57,11 @@ def battler(inventory):
                 sleep(0.3)
                 print("Your turn!")
 
-                proposeAttacks(inventory, chosenOne)
+                proposeAttacks(inventory)
                 attack = input("Which will you choose? (enter without quotation marks) ")
                 if attack == "garlicbread":
                     print("This vampire really likes garlic bread! You share the bread and no damage was dealt.")
+                    breadUsed = 1
                 elif attack == "flashlight":
                     print("You pulled out a high power flashlight! The vampire fell to its knees.")
                     opponentLife -= randint(10, 28)
@@ -99,7 +106,7 @@ def battler(inventory):
                 sleep(0.3)
                 print("Your turn!")
 
-                proposeAttacks(inventory, chosenOne)
+                proposeAttacks(inventory)
                 attack = input("Which will you choose? (enter without quotation marks) ")
                 if attack == "stand tall":
                     print("You decided to stand tall. That spooked the sheep!")
@@ -145,7 +152,7 @@ def battler(inventory):
                 sleep(0.3)
                 print("Your turn!")
 
-                proposeAttacks(inventory, chosenOne)
+                proposeAttacks(inventory)
                 attack = input("Which will you choose? (enter without quotation marks) ")
                 if attack == "make a flame":
                     print("Desmond is easily spooked by fire.")
@@ -186,9 +193,15 @@ def battler(inventory):
 
         if opponentLife <= 0:
             print("You won!")
-            test += 1
-            # Item drop?
+            if breadUsed == 1:
+                return "breadUsed"
+            else:
+                return None
+                # Item drop?
         elif playerLife <= 0:
-            print("You lost a life!")
-            test += 1
+            print("You lost!")
+            if breadUsed == 1:
+                return "breadUsed"
+            else:
+                return "lost"
     print("Test finished")

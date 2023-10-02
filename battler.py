@@ -252,5 +252,3 @@ def battler(inventory):
             return "breadUsed"
         else:
             return "lost"
-        
-battler("garlicbread")

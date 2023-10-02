@@ -78,7 +78,7 @@ def quizdragon(name):
                 ("A. Antartica","B. South America","C. Africa", "D. Australia/Oceania"),
                 ("A. Vancouver","B. Ottawa","C. Toronto", "D. Québec"),
                 ("A. Cornelly","B. Cornelius","C. Cornelis", "D. Cornelion"),
-                ("A. C#, B. Java, C. C++, D. CSS")
+                ("A. C#", "B. Java", "C. C++", "D. CSS")
                 )
         
         right_answers = ("B","A","D","D","B","C","A")
@@ -143,4 +143,4 @@ def quizdragon(name):
 
             return "lost"
 
-quizdragon("start")
+#quizdragon("start")

@@ -88,7 +88,7 @@ def riddle_game():
     sleep(3)
     return "projector device"
     
-riddle_game()
+#riddle_game()
 #pt 2 of the game 
 # with all the answers from the riddle they would need to form a word 
 #it'll work as a passcode to unlock the door to go outside the rocket 
@@ -149,4 +149,4 @@ def doorcode():
         print()
         print("Incorrect passcode. The door remains locked. Please try again.")
 
-doorcode()
+#doorcode()

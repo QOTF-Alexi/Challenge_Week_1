@@ -6,11 +6,21 @@ written by: No'railly
 '''
 import miscStuffLib
 import random
+from time import sleep
 
 def word_unscrambler():
+
+    print()
+    print("While wandering the planet you suddenly stepped on the wrong place and fell into a deep hole. Your gaze started going black.")
+    sleep(0.75)
+    print("You wake up abruptively and looked around. You realize you're in a crater. The crater is filled with blocks of letters.")
+    sleep(0.75)
+    print("You here rumbling sounds coming out of nowhere and you see some creature suddenly appearing in front of you.")
+    sleep(0.5)
+    print()
     print()
     print(r"""
-                                         ,|
+                             ,|
                              //|                              ,|
                            //,/                             -~ |
                          // / |                         _-~   /  ,
@@ -37,13 +47,20 @@ def word_unscrambler():
                                     \~\
                                      ~          
           """)
-    print("|Hello young traveller. Welcome to The letter Crater.|")
-    print("|You fell in here and got TRAPPED! To get out you need to play a game.|")
-    print("|In this game you need to unscramble all the words that are given to you.|")
+    print()
+    miscStuffLib.lines(80)
+    print("|Hello young traveller. Welcome to The letter Crater.                          |")
+    sleep(0.75)
+    print("|You fell in here and got TRAPPED! To get out you need to play a game.         |")
+    sleep(0.75)
+    print("|In this game you need to unscramble all the words that are given to you.      |")
+    sleep(0.75)
     print("|Only when you scramble 6 words correctcly, you will be teleported out of here.|")
-    print("|If not you will be stuck here forever! Good luck|")
+    sleep(0.75)
+    print("|If not you will be stuck here forever! Good luck                              |")
+    sleep(0.75)
 
-    miscStuffLib.lines(70)
+    miscStuffLib.lines(80)
     
     valid_words = ["windows", "basecamp", "laptop", "challenge", "backpack", "python"]
 
@@ -84,4 +101,4 @@ def word_unscrambler():
         print("You have made too many mistakes. You only unscrambled", correct_guesses, "words correctly. Because of that you will stay here forever!")
         return "lost"
     
-word_unscrambler()
+#word_unscrambler()

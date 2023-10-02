@@ -3,7 +3,7 @@ Game that lets player unscramble words
 written by: No'railly
 
 '''
-
+import miscStuffLib
 import random
 
 def word_unscrambler():
@@ -21,16 +21,19 @@ def word_unscrambler():
         random.shuffle(word_as_list)
         scrambled_word = ''.join(word_as_list)
 
+        miscStuffLib.lines(60)
         print("Round " + str(guess_count + 1) + ": Unscramble the word: " + scrambled_word)
         
         while True:
             user_guess = input("Enter a valid English word: ").lower()
 
             if user_guess == chosen_word:
+                print()
                 print("Correct! You unscrambled the word.")
                 correct_guesses += 1
                 break
             else:
+                print()
                 print("Try again. It's not the same as the scrambled word.")
 
         guess_count += 1
@@ -43,4 +46,4 @@ def word_unscrambler():
         return "lost"
 
 
-
+word_unscrambler()

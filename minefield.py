@@ -22,7 +22,7 @@ def minefield(inventory):
                 print("You did not click play. Please try again.")
 
         text = [
-            "|           ### VOICE MESSAGE ###            |",
+            "|############## VOICE MESSAGE ###############|",
             "| For anyone that is receiving this message. |",
             "|        please listen carefully!            |",
             "|   This message will only be played once!   |",
@@ -66,4 +66,5 @@ def minefield(inventory):
         print("|Congratulations! You've successfully navigated the minefield.|")
     else:
         print("You've exceeded the maximum number of guesses. Game over.")
+        return "lost"
 
